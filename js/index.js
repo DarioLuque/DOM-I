@@ -38,5 +38,123 @@ const siteContent = {
 };
 
 // Example: Update the img src for the logo
+// pics
 let logo = document.getElementById("logo-img");
-logo.setAttribute('src', siteContent["nav"]["img-src"])
+logo.setAttribute('src', siteContent["nav"]["img-src"]);
+
+// nav and header
+
+let nav1 = document.querySelectorAll("a");
+
+nav1.forEach(function(value, i) {
+  value.textContent = siteContent.nav[`nav-item-${i+1}`];
+});
+
+
+const header = document.querySelector('h1');
+header.textContent = siteContent.cta.h1
+
+
+
+
+const topImg = document.getElementById('cta-img');
+topImg.src = "img/header-img.png"
+
+const button = document.querySelector('button');
+button.textContent = siteContent.cta.button;
+
+// text content h4
+const feature = document.querySelectorAll('.top-content .text-content h4')[0];
+feature.textContent = siteContent[`main-content`][`features-h4`];
+
+const about = document.querySelectorAll('.top-content .text-content h4')[1];
+about.textContent = siteContent[`main-content`][`about-h4`];
+
+// text content
+
+const para1 = document.querySelectorAll('.top-content .text-content p')[0];
+para1.textContent = siteContent[`main-content`][`features-content`];
+
+const para2 = document.querySelectorAll('.top-content .text-content p')[1];
+para2.textContent = siteContent[`main-content`][`about-content`];
+
+// middleimg
+
+const litImg = document.getElementById('middle-img');
+litImg.src = "img/mid-page-accent.jpg";
+
+// bottom content
+
+const service = document.querySelectorAll('.bottom-content .text-content h4')[0];
+service.textContent = siteContent[`main-content`][`services-h4`];
+
+const product = document.querySelectorAll('.bottom-content .text-content h4')[1];
+product.textContent = siteContent[`main-content`][`product-h4`];
+
+const vision = document.querySelectorAll('.bottom-content .text-content h4')[2];
+vision.textContent = siteContent[`main-content`][`vision-h4`];
+
+// bottom paragraphs
+
+const para3 = document.querySelectorAll('.bottom-content .text-content p')[0];
+para3.textContent = siteContent[`main-content`][`services-content`];
+
+const para4 = document.querySelectorAll('.bottom-content .text-content p')[1];
+para4.textContent = siteContent[`main-content`][`product-content`];
+
+const para5 = document.querySelectorAll('.bottom-content .text-content p')[2];
+para5.textContent = siteContent[`main-content`][`vision-content`];
+
+// contact
+
+const contact = document.querySelectorAll('.contact h4')[0];
+contact.textContent = siteContent[`contact`][`contact-h4`];
+
+// contact info
+
+const para6 = document.querySelectorAll('.contact p')[0];
+para6.textContent = siteContent[`contact`][`address`];
+
+const para7 = document.querySelectorAll('.contact p')[1];
+para7.textContent = siteContent[`contact`][`phone`];
+
+const para8 = document.querySelectorAll('.contact p')[2];
+para8.textContent = siteContent[`contact`][`email`];
+
+// footer
+
+const foot = document.querySelector('footer p');
+foot.textContent = siteContent[`footer`][`copyright`];
+
+
+
+const home = document.createElement('a');
+home.textContent = "Home";
+
+
+const careers = document.createElement('a');
+careers.textContent = "Careers";
+
+// new navigation
+
+const newnav = document.querySelector('nav');
+newnav.prepend(home);
+
+
+const newnav2 = document.querySelector('nav');
+newnav2.appendChild(careers);
+
+// nav text color
+
+const navText = document.querySelectorAll('a');
+navText.forEach(element => {
+  element.style.color = 'green'
+});
+
+// links
+
+const Link = document.querySelectorAll('a')[0];
+Link.href = "#";
+
+const Link2 = document.querySelectorAll('a')[7];
+Link2.href = "#";
