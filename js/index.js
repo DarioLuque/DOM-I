@@ -153,8 +153,8 @@ navText.forEach(element => {
 
 // links
 
-const makeLink = document.querySelectorAll('a')[0];
-makeLink.href = "#";
+const Link = document.querySelectorAll('a')[0];
+Link.href = "#";
 
-const makeLink2 = document.querySelectorAll('a')[7];
-makeLink2.href = "#";
+const Link2 = document.querySelectorAll('a')[7];
+Link2.href = "#";
